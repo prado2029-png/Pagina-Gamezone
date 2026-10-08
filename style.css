@@ -19,6 +19,7 @@ body {
     line-height: 1.6;
 }
 
+
 /* ================================
    NAVBAR
 ================================ */
@@ -397,8 +398,6 @@ body {
 }
 
 
-
-
 /* IMÁGENES */
 
 .juego-imagen {
@@ -470,6 +469,7 @@ body {
     object-position: center;
     display: block;
 }
+
 
 /* INFORMACIÓN */
 
@@ -1050,6 +1050,8 @@ footer p {
     }
 
 }
+
+
 /* ================================
    CUESTIONARIO
 ================================ */
@@ -1091,6 +1093,8 @@ footer p {
 #resultado {
     text-align: center;
 }
+
+
 /* ================================
    PALETA DE COLORES
 ================================ */
@@ -1181,4 +1185,438 @@ footer p {
         grid-template-columns: 1fr;
     }
 
+}
+
+
+/* =========================
+   HERRAMIENTAS DE GOOGLE
+========================= */
+
+.google-contenedor {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.google-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.google-card {
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    transition: 0.3s ease;
+}
+
+.google-card:hover {
+    transform: translateY(-8px);
+    border-color: #7C3AED;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.18);
+}
+
+.google-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.google-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 12px;
+}
+
+.google-card p {
+    line-height: 1.7;
+    opacity: 0.85;
+    margin-bottom: 15px;
+}
+
+.google-card small {
+    display: block;
+    color: #06B6D4;
+    font-weight: 600;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .google-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .google-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   CARRUSEL GAMEZONE
+========================= */
+
+#gameCarousel {
+    max-width: 1100px;
+    margin: 60px auto;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+#gameCarousel .carousel-item {
+    height: 480px;
+    position: relative;
+    background: #080812;
+}
+
+#gameCarousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #080812;
+}
+
+#gameCarousel .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0, 0, 0, 0.85)
+    );
+}
+
+#gameCarousel .carousel-caption {
+    z-index: 2;
+    text-align: left;
+    left: 50px;
+    bottom: 45px;
+}
+
+#gameCarousel .carousel-caption h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#gameCarousel .carousel-caption p {
+    font-size: 17px;
+}
+
+
+/* Flechas */
+
+#gameCarousel .carousel-control-prev,
+#gameCarousel .carousel-control-next {
+    width: 8%;
+}
+
+#gameCarousel .carousel-control-prev-icon,
+#gameCarousel .carousel-control-next-icon {
+    background-color: rgba(124, 58, 237, 0.8);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 50%;
+}
+
+
+/* Indicadores */
+
+#gameCarousel .carousel-indicators button {
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+}
+/* ================================
+   FONDO ORIGINAL GAMEZONE
+================================ */
+
+body {
+    background: #080812 !important;
+    color: #f8fafc !important;
+}
+
+.navbar {
+    background: #080812 !important;
+}
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(124, 58, 237, 0.25),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(6, 182, 212, 0.12),
+            transparent 25%
+        ) !important;
+}
+
+.seccion {
+    background: #080812 !important;
+}
+
+.sobre {
+    background: #0d0d18 !important;
+}
+
+.paleta {
+    background: #080812 !important;
+}
+
+.codigo-section {
+    background: #0d0d18 !important;
+}
+
+footer {
+    background: #080812 !important;
+}
+/* ================================
+   BOTÓN MODO OSCURO / CLARO
+================================ */
+
+.modo-btn {
+    background: transparent;
+    border: 1px solid #7c3aed;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.modo-btn:hover {
+    background: #7c3aed;
+    transform: rotate(15deg);
+}
+
+
+/* ================================
+   MODO CLARO
+================================ */
+
+body.modo-claro {
+    background: #f4f5f9 !important;
+    color: #18181b !important;
+}
+
+
+/* NAVBAR */
+
+body.modo-claro .navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid #ddd6fe;
+}
+
+body.modo-claro .logo {
+    color: #18181b;
+}
+
+body.modo-claro .navbar nav a {
+    color: #52525b;
+}
+
+body.modo-claro .navbar nav a:hover,
+body.modo-claro .navbar nav a.activo {
+    color: #18181b;
+}
+
+body.modo-claro .modo-btn {
+    color: #18181b;
+}
+
+
+/* HERO */
+
+body.modo-claro .hero {
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(124, 58, 237, 0.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(6, 182, 212, 0.10),
+            transparent 25%
+        ) !important;
+}
+
+body.modo-claro .hero-texto {
+    color: #52525b;
+}
+
+
+/* SECCIÓN DE JUEGOS */
+
+body.modo-claro .seccion {
+    background: #f4f5f9 !important;
+}
+
+body.modo-claro .juego-card {
+    background: #ffffff;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro .juego-info p {
+    color: #52525b;
+}
+
+
+/* SOBRE GAMEZONE */
+
+body.modo-claro .sobre {
+    background: #ffffff !important;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro .sobre-texto {
+    color: #52525b;
+}
+
+
+/* PÁGINAS INFORMATIVAS */
+
+body.modo-claro .pagina-header {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 58, 237, 0.10),
+            transparent 45%
+        );
+}
+
+body.modo-claro .pagina-header > p:last-child {
+    color: #52525b;
+}
+
+
+/* CAJAS */
+
+body.modo-claro .info-box {
+    background: #ffffff;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro .info-box p {
+    color: #52525b;
+}
+
+body.modo-claro .concepto {
+    background: #ffffff;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro .concepto p {
+    color: #52525b;
+}
+
+
+/* COMPARACIÓN */
+
+body.modo-claro .tech-comparison div {
+    background: #f1f1f5;
+    border-color: #ddd6fe;
+}
+
+
+/* CÓDIGO */
+
+body.modo-claro .codigo-section {
+    background: #ffffff !important;
+}
+
+body.modo-claro .codigo {
+    background: #f8f8fa;
+    border-color: #ddd6fe;
+}
+
+body.modo-claro .codigo-top {
+    background: #e4e4e7;
+}
+
+
+/* JQUERY */
+
+body.modo-claro .game-panel {
+    border-color: #ddd6fe;
+}
+
+
+/* QUIZ */
+
+body.modo-claro #quiz label {
+    background: #ffffff;
+    border-color: #e4e4e7;
+    color: #3f3f46;
+}
+
+body.modo-claro #quiz label:hover {
+    color: #18181b;
+}
+
+
+/* PALETA */
+
+body.modo-claro .paleta {
+    background: #f4f5f9 !important;
+}
+
+body.modo-claro .color-card {
+    background: #ffffff;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro .color-card small {
+    color: #52525b;
+}
+
+body.modo-claro .paleta-descripcion {
+    color: #52525b;
+}
+
+
+/* GOOGLE */
+
+body.modo-claro .google-card {
+    background: #ffffff;
+    border-color: #ddd6fe;
+}
+
+body.modo-claro .google-card p {
+    color: #3f3f46;
+}
+
+
+/* CARRUSEL */
+
+body.modo-claro #gameCarousel .carousel-item,
+body.modo-claro #gameCarousel img {
+    background: #e4e4e7;
+}
+
+
+/* FOOTER */
+
+body.modo-claro footer {
+    background: #ffffff !important;
+    border-color: #e4e4e7;
+}
+
+body.modo-claro footer p {
+    color: #71717a;
 }
